@@ -1,4 +1,8 @@
-/* Question 1: Why is the counter value not centered? (vertically) */
+/* Question 1: Why is the counter value not centered? (vertically) 
+
+due to the align-items property
+
+*/
 body {
   display: flex;
   justify-content: center;
@@ -9,10 +13,15 @@ body {
 
 .app {
   text-align: center;
+  
 }
 
 #counter-value {
   font-size: 48px;
-  /* Question 2: Why is the color not applying to the counter value? */
-  text-emphasis-color: #FF6347;
+  /* Question 2: Why is the color not applying to the counter value?
+  
+  text-emphasis-color Is not the correct property
+
+   */
+  color: #FF6347;
 }
