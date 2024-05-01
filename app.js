@@ -1,6 +1,6 @@
 // Question 3: Why does the counter start at NaN?
 //because it needs a number in the innerText not a string
-let count = parseInt(document.getElementById('counter-value').innerText);
+let count = parseInt(document.getElementById('counter-value').innerText, 10);
 
 const incrementButton = document.getElementById('increment');
 const decrementButton = document.getElementById('decrement');
@@ -10,7 +10,6 @@ const resetButton = document.getElementById('reset');
 //nothing will happen because the value is set to be 10
 //unless you change 10 to count so it can increment one by one.
 incrementButton.addEventListener('click', function() {
-  debugger
     count++;
     document.getElementById('counter-value').innerText = count;
 });
@@ -36,6 +35,12 @@ resetButton.addEventListener('click', function() {
 // hover over variable
 
 //  Question 8: What is the scope of the count variable in DevTools?
+//is global scope variable 
 
 // Question 9: Use the Network tab to find out: Is the app.js file loaded successfully?
+//yes status 200
+
 // Question 10: Use the Console to track errors. Are there any errors being thrown?
+// there is verbose [violation] in the increment count click event, that is taking
+//longer than expected.  to fix this problem, I removed debugger statement.
+//
